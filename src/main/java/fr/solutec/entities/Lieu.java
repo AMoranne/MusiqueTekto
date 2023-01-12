@@ -10,14 +10,10 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor @AllArgsConstructor @Data 	
 @Entity
-public class User {
-	
+public class Lieu {
 	@Id @GeneratedValue							
 	private Long id;
-	
-	private String login;
-	private String password;
 	private String nom;
-	private String prenom;
-	private String mail;
+	private String adresse;
+	private int nb_places;
 }

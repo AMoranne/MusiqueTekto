@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.solutec.entities.Person;
 import fr.solutec.entities.User;
 
 import fr.solutec.repository.UserRepository;
@@ -36,10 +35,14 @@ public class UserRest {
 		return userRepos.findByNom(nom);
 	}
 	
-	@PutMapping("user/{nom}")
+	/*@PutMapping("user/{nom}")
 	public User modifPerson(@RequestBody User u, @PathVariable String nom) {
 		u.setNom(nom);
 		return userRepos.save(u);
+	}*/
+	@PutMapping("user/{id}")
+	public User modifPerson(@RequestBody User u, @PathVariable Long id) {
+		u.setId(id);
+		return userRepos.save(u);
 	}
-	
 }

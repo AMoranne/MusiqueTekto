@@ -10,14 +10,11 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor @AllArgsConstructor @Data 	
 @Entity
-public class User {
-	
-	@Id @GeneratedValue							
+public class Morceau {
+	@Id @GeneratedValue	
 	private Long id;
-	
-	private String login;
-	private String password;
 	private String nom;
-	private String prenom;
-	private String mail;
+	private String album;
+	private String genre;
+	private String auteur;
 }

@@ -1,4 +1,4 @@
-package com.example.demo;
+package fr.solutec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +8,8 @@ public class MusiqueTektoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MusiqueTektoApplication.class, args);
+		
+		System.out.println("lancement terminé");
 	}
 
 }

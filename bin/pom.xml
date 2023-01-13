@@ -8,7 +8,7 @@
 		<version>2.7.8-SNAPSHOT</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>fr.solutec</groupId>
+	<groupId>com.example</groupId>
 	<artifactId>MusiqueTekto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MusiqueTekto</name>

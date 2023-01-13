@@ -8,4 +8,6 @@ import fr.solutec.entities.User;
 
 public interface UserRepository extends CrudRepository<User, Long>{
 	public List<User> findByNom(String nom);
+
+	public User findByLoginAndPassword(String login, String password);
 }

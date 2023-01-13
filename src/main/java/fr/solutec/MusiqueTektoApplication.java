@@ -62,8 +62,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		User u1 = new User(null, "Test", "Test", "Test", "Test", "Test");
-		User u2 = new User(null, "LOL", "Test", "Test", "Test", "Test");
+		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5");
+		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10");
 		userRepo.save(u1);
 		userRepo.save(u2);
 		Commandes c1 = new Commandes(null,"Test",u1);

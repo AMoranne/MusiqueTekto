@@ -19,9 +19,14 @@ public class BoutiqueRest {
 	@Autowired
 	private BoutiqueRepository boutiqueRepo;
 	
-	@GetMapping("produit/{designation}")
+	@GetMapping("produits/{designation}")
 	public List<Produits> getByDesignation(@PathVariable String designation){
 		return boutiqueRepo.findByDesignation(designation);
+		}
+	
+	@GetMapping("produits/all")
+	public Iterable<Produits> getAllProduits(){
+		return boutiqueRepo.findAll();
+	}	
 	
 }
-	}

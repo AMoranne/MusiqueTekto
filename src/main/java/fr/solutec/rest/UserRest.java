@@ -39,9 +39,9 @@ public class UserRest {
 	public Optional<User> getById(@PathVariable Long id) {
 		return userRepos.findById(id);
 	}
-	@GetMapping("user/nom/{nom}")
-	public List<User> getByNom(@PathVariable String nom) {
-		return userRepos.findByNom(nom);
+	@GetMapping("user/login/{login}")
+	public List<User> getByNom(@PathVariable String login) {
+		return userRepos.findByLogin(login);
 	}
 	
 	/*@PutMapping("user/{nom}")

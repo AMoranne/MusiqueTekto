@@ -18,6 +18,8 @@ public class Evenement {
 	private String nom;
 	private Float prix;
 	
+	private String description;
+	
 	@ManyToOne
 	private Lieu lieu;
 	@ManyToOne 

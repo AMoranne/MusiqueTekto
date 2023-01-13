@@ -78,8 +78,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Lieu l2 = new Lieu(null,"L1","L2",314);
 		lieuRepo.save(l1);
 		lieuRepo.save(l2);
-		Evenement e1 = new Evenement(null,"E1",(float) 314,l1,a1);
-		Evenement e2 = new Evenement(null,"E2",(float) 315,l2,a2);
+		Evenement e1 = new Evenement(null,"E1",(float) 314,"EVENEMENT RAP : Préparez vous !!",l1,a1);
+		Evenement e2 = new Evenement(null,"E2",(float) 315,"EVENEMENT REGGAETON : Préparaez vous!!",l2,a2);
 		evenementRepo.save(e1);
 		evenementRepo.save(e2);
 		Commentaires co1 = new Commentaires(null,"C1",e1,u1);

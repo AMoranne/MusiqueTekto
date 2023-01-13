@@ -62,8 +62,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		User u1 = new User(null, "Test", "Test", "Test", "Test", "Test");
-		User u2 = new User(null, "LOL", "Test", "Test", "Test", "Test");
+		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5");
+		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10");
 		userRepo.save(u1);
 		userRepo.save(u2);
 		Commandes c1 = new Commandes(null,"Test",u1);
@@ -94,10 +94,15 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Morceau mo2 = new Morceau(null,"M5","M6","M7","M8");
 		morceauRepo.save(mo1);
 		morceauRepo.save(mo2);
+		//produits
 		Produits po1 = new Produits(null,"P1","C1",(float)314);
 		Produits po2 = new Produits(null,"P2","C2",(float)315);
+		Produits po3 = new Produits(null,"P3","C3",(float)314);
+		Produits po4 = new Produits(null,"P4","C4",(float)315);
 		produitsRepo.save(po1);
 		produitsRepo.save(po2);
+		produitsRepo.save(po3);
+		produitsRepo.save(po4);
 		Panier p1 = new Panier(null,314,c1,po1);
 		Panier p2 = new Panier(null,315,c2,po2);
 		panierRepo.save(p1);

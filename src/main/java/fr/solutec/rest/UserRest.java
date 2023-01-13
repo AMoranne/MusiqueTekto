@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,14 +25,23 @@ public class UserRest {
 	@Autowired
 	private UserRepository userRepos;
 	
-	
+	@PostMapping("login")   
+	public User connexionUser(@RequestBody User user) {
+		if (user != null) {
+			return userRepos.findByLoginAndPassword(user.getLogin(), user.getPassword());
+		}
+		else {
+			return null;
+		}
+		
+	}
 	@GetMapping("user/{id}")
 	public Optional<User> getById(@PathVariable Long id) {
 		return userRepos.findById(id);
 	}
-	@GetMapping("user/nom/{nom}")
-	public List<User> getByNom(@PathVariable String nom) {
-		return userRepos.findByNom(nom);
+	@GetMapping("user/login/{login}")
+	public List<User> getByNom(@PathVariable String login) {
+		return userRepos.findByLogin(login);
 	}
 	
 	/*@PutMapping("user/{nom}")

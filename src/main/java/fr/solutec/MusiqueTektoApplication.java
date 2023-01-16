@@ -102,7 +102,6 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Morceau mo2 = new Morceau(null,"M5","M6","M7","M8");
 		morceauRepo.save(mo1);
 		morceauRepo.save(mo2);
-		//produits
 		Produits po1 = new Produits(null,"P1","C1",(float)314);
 		Produits po2 = new Produits(null,"P2","C2",(float)315);
 		Produits po3 = new Produits(null,"P3","C3",(float)314);
@@ -115,8 +114,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Panier p2 = new Panier(null,315,c2,po2);
 		panierRepo.save(p1);
 		panierRepo.save(p2);
-		Playlist pl1 = new Playlist(null);
-		Playlist pl2 = new Playlist(null);
+		Playlist pl1 = new Playlist(null,"Playlist 1",mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1);
+		Playlist pl2 = new Playlist(null,"Playlist 2",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
 		playlistRepo.save(pl1);
 		playlistRepo.save(pl2);
 	}

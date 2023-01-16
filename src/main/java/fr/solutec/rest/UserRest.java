@@ -54,4 +54,9 @@ public class UserRest {
 		u.setId(id);
 		return userRepos.save(u);
 	}
+	
+	@PostMapping("user")
+	public User savePerson(@RequestBody User u) {
+		return userRepos.save(u);
+	}
 }

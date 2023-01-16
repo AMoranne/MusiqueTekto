@@ -31,4 +31,6 @@ public class EvenementRest {
 	public List<Evenement> getByArtiste(@PathVariable String artiste_nom) {    //Indique que le user_id est une variable de l'URL
 		return evenementRepo.findByArtiste_nom(artiste_nom);
 	}
+	
+	
 }

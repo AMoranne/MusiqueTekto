@@ -1,5 +1,7 @@
 package fr.solutec.entities;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,7 +20,11 @@ public class Evenement {
 	private String nom;
 	private Float prix;
 	
+	private String resume;
+	
 	private String description;
+	private String date;
+	private String image;
 	
 	@ManyToOne
 	private Lieu lieu;

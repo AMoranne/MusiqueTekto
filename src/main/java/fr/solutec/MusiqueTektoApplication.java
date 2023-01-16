@@ -78,10 +78,18 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Lieu l2 = new Lieu(null,"L1","L2",314);
 		lieuRepo.save(l1);
 		lieuRepo.save(l2);
-		Evenement e1 = new Evenement(null,"E1",(float) 20,"EVENEMENT RAP : Préparez vous !!",l1,a1);
-		Evenement e2 = new Evenement(null,"E2",(float) 25,"EVENEMENT REGGAETON : Préparaez vous!!",l2,a2);
+		Evenement e1 = new Evenement(null,"RAP CONTENDERS",(float) 20,"EVENEMENT RAP : Préparez vous !!","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.","05-05-2023","https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",l1,a1);
+		Evenement e2 = new Evenement(null,"REGGAEMUZZ V1",(float) 25,"EVENEMENT REGGAETON : Préparaez vous!!","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.","05-05-2023","https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",l2,a2);
+		Evenement e3 = new Evenement(null,"95S OLD SCHOOL",(float) 25,"EVENEMENT HIP HOP ET AFROBEAT : Préparez vous!!","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.","05-05-2023","https://images.unsplash.com/photo-1485579149621-3123dd979885?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80",l2,a2);
+		Evenement e4 = new Evenement(null,"CLASSIKO",(float) 25,"EVENEMENT ORCHESTRE SYMPHONIQUE : Préparez vous!!","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.","05-05-2023","https://images.unsplash.com/photo-1433622070098-754fdf81c929?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",l2,null);
+		Evenement e5 = new Evenement(null,"REGGAEMUZZ V2",(float) 25,"EVENEMENT REGGAETON : Préparez vous!!","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.","05-05-2023","https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",l2,a1);
+		Evenement e6 = new Evenement(null,"REGGAEMUZZ V3",(float) 25,"EVENEMENT REGGAETON : Préparez vous!!","The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.","05-05-2023","https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",l2,a2);
 		evenementRepo.save(e1);
 		evenementRepo.save(e2);
+		evenementRepo.save(e3);
+		evenementRepo.save(e4);
+		evenementRepo.save(e5);
+		evenementRepo.save(e6);
 		Commentaires co1 = new Commentaires(null,"C1",e1,u1);
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);
@@ -94,7 +102,6 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Morceau mo2 = new Morceau(null,"M5","M6","M7","M8");
 		morceauRepo.save(mo1);
 		morceauRepo.save(mo2);
-		//produits
 		Produits po1 = new Produits(null,"P1","C1",(float)314);
 		Produits po2 = new Produits(null,"P2","C2",(float)315);
 		Produits po3 = new Produits(null,"P3","C3",(float)314);
@@ -107,8 +114,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Panier p2 = new Panier(null,315,c2,po2);
 		panierRepo.save(p1);
 		panierRepo.save(p2);
-		Playlist pl1 = new Playlist(null);
-		Playlist pl2 = new Playlist(null);
+		Playlist pl1 = new Playlist(null,"Playlist 1",mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1);
+		Playlist pl2 = new Playlist(null,"Playlist 2",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
 		playlistRepo.save(pl1);
 		playlistRepo.save(pl2);
 	}

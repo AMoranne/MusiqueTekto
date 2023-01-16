@@ -21,7 +21,7 @@ public class BoutiqueRest {
 	@Autowired
 	private BoutiqueRepository boutiqueRepo;
 	
-	@GetMapping("produits/{designation}")// retrouver un produit par son nom
+	@GetMapping("produits/nom/{designation}")// retrouver un produit par son nom
 	public List<Produits> getByDesignation(@PathVariable String designation){
 		return boutiqueRepo.findByDesignation(designation);
 		}
@@ -31,6 +31,11 @@ public class BoutiqueRest {
 		return boutiqueRepo.findAll();
 	}	
 	
-
+	// retrouver un produit par sa categorie
+	@GetMapping("produits/categorie/{categorie}")
+	public List<Produits> getByCategorie(@PathVariable String categorie){
+		return boutiqueRepo.findByCategorie(categorie);
+		}
+	
 	
 }

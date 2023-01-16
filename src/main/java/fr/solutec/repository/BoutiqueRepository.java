@@ -10,4 +10,5 @@ import fr.solutec.entities.Produits;
 public interface BoutiqueRepository extends CrudRepository <Produits, String>{
 
 	public List<Produits> findByDesignation(String designation);
+	public List<Produits> findByCategorie(String categorie);
 }

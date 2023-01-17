@@ -21,5 +21,4 @@ public class User {
 	private String prenom;
 	private String mail;
 	
-	
 }

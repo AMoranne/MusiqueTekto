@@ -1,8 +1,11 @@
 package fr.solutec.entities;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
@@ -16,5 +19,8 @@ public class Message {
 	private Long id;
 	private String contenu;
 	
-	//TODO message user
+	@ManyToOne
+	private User user;
+	@ManyToOne
+	private User destinataire;
 }

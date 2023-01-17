@@ -64,8 +64,10 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 
 		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5");
 		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10");
+		User u3 = new User(null,"U11","U12","U13","U14","U15");
 		userRepo.save(u1);
 		userRepo.save(u2);
+		userRepo.save(u3);
 		Commandes c1 = new Commandes(null,"Test",u1);
 		Commandes c2 = new Commandes(null,"Test",u2);
 		commandesRepo.save(c1);
@@ -94,8 +96,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);
 		commentairesRepo.save(co2);
-		Message m1 = new Message(null,"wesh alors1");
-		Message m2 = new Message(null,"wesh alors2");
+		Message m1 = new Message(null,"wesh alors1",u1,u2);
+		Message m2 = new Message(null,"wesh alors2",u1,u3);
 		messageRepo.save(m1);
 		messageRepo.save(m2);
 		Morceau mo1 = new Morceau(null,"M1","M2","M3","M4");

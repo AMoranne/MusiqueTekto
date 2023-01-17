@@ -100,8 +100,18 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		messageRepo.save(m2);
 		Morceau mo1 = new Morceau(null,"M1","M2","M3","M4");
 		Morceau mo2 = new Morceau(null,"M5","M6","M7","M8");
+		Morceau mo3 = new Morceau(null,"M9","M10","M11","M12");
+		Morceau mo4 = new Morceau(null,"M13","M14","M15","M16");
+		Morceau mo5 = new Morceau(null,"M17","M18","M19","M20");
+		Morceau mo6 = new Morceau(null,"M21","M22","M23","M24");
+		Morceau mo7 = new Morceau(null,"M25","M26","M27","M28");
 		morceauRepo.save(mo1);
 		morceauRepo.save(mo2);
+		morceauRepo.save(mo3);
+		morceauRepo.save(mo4);
+		morceauRepo.save(mo5);
+		morceauRepo.save(mo6);
+		morceauRepo.save(mo7);
 		Produits po1 = new Produits(null,"P1","C1",(float)314);
 		Produits po2 = new Produits(null,"P2","C2",(float)315);
 		Produits po3 = new Produits(null,"P3","C3",(float)314);
@@ -116,7 +126,18 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		panierRepo.save(p2);
 		Playlist pl1 = new Playlist(null,"Playlist 1",mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1);
 		Playlist pl2 = new Playlist(null,"Playlist 2",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
+		Playlist pl3 = new Playlist(null,"Playlist 3",mo1,mo2,mo3,mo4,mo5,mo6,null,null,null,null);
+		Playlist pl4 = new Playlist(null,"Playlist 4",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
+		Playlist pl5 = new Playlist(null,"Playlist 5",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
+		Playlist pl6 = new Playlist(null,"Playlist 6",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
+		Playlist pl7 = new Playlist(null,"Playlist 7",mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2,mo1,mo2);
 		playlistRepo.save(pl1);
 		playlistRepo.save(pl2);
+		playlistRepo.save(pl3);
+		playlistRepo.save(pl4);
+		playlistRepo.save(pl5);
+		playlistRepo.save(pl6);
+		playlistRepo.save(pl7);
+		
 	}
 }

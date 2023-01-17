@@ -14,25 +14,8 @@ import lombok.NoArgsConstructor;
 public class Playlist {
 	@Id @GeneratedValue	
 	private Long id;
-	private String nom;
 	@ManyToOne
-	private Morceau morceau1;
+	private User user;
 	@ManyToOne
-	private Morceau morceau2;
-	@ManyToOne
-	private Morceau morceau3;
-	@ManyToOne
-	private Morceau morceau4;
-	@ManyToOne
-	private Morceau morceau5;
-	@ManyToOne
-	private Morceau morceau6;
-	@ManyToOne
-	private Morceau morceau7;
-	@ManyToOne
-	private Morceau morceau8;
-	@ManyToOne
-	private Morceau morceau9;
-	@ManyToOne
-	private Morceau morceau10;
+	private Morceau morceau;
 }

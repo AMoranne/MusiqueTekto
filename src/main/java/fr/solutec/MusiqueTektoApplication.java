@@ -62,6 +62,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+
+		
 		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5", "10 rue machin", "45000");
 		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10", "25 avenue de truc", "87999");
 		userRepo.save(u1);
@@ -94,8 +96,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);
 		commentairesRepo.save(co2);
-		Message m1 = new Message(null,"wesh alors1");
-		Message m2 = new Message(null,"wesh alors2");
+		Message m1 = new Message(null,"wesh alors1",u1,u2);
+		Message m2 = new Message(null,"wesh alors2",u1,u2);
 		messageRepo.save(m1);
 		messageRepo.save(m2);
 		Morceau mo1 = new Morceau(null,"M1","M2","M3","M4");

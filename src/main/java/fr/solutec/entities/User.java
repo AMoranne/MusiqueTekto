@@ -24,6 +24,9 @@ public class User {
 	private String code_Postale;
 	
 	
+	//private byte[] img;
+	
+	
 	
 	
 }

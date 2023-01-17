@@ -3,7 +3,6 @@ package fr.solutec.rest;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,10 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.solutec.entities.Morceau;
 import fr.solutec.entities.Playlist;
-import fr.solutec.entities.User;
-import fr.solutec.repository.MorceauRepository;
 import fr.solutec.repository.PlaylistRepository;
 
 @RestController @CrossOrigin("*")

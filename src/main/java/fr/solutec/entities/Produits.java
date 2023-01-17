@@ -16,4 +16,5 @@ public class Produits {
 	private String categorie;
 	private String designation;
 	private Float prix;
+	private String imageurl;
 }

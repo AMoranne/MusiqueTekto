@@ -1,7 +1,7 @@
 package fr.solutec.entities;
 
-import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -22,9 +22,13 @@ public class Evenement {
 	
 	private String resume;
 	
+	@Column(columnDefinition="LONGTEXT")
 	private String description;
+	
 	private String date;
-	private String image;
+	private String image_mini;
+	private String image_carousel;
+	private String horaire;
 	
 	@ManyToOne
 	private Lieu lieu;

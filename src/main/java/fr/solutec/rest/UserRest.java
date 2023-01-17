@@ -6,8 +6,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -32,9 +36,13 @@ public class UserRest {
 		}
 		else {
 			return null;
-		}
-		
+		}	
 	}
+	
+
+
+
+	
 	@GetMapping("user/{id}")
 	public Optional<User> getById(@PathVariable Long id) {
 		return userRepos.findById(id);
@@ -53,5 +61,27 @@ public class UserRest {
 	public User modifPerson(@RequestBody User u, @PathVariable Long id) {
 		u.setId(id);
 		return userRepos.save(u);
+	}
+	
+	@PostMapping("user")
+	public User savePerson(@RequestBody User u) {
+		return userRepos.save(u);
+
+	}
+	
+	@PatchMapping("user/{id}")
+	public User mofifPerson(@RequestBody User u,@PathVariable Long id ) {
+		u.setId(id);
+		return userRepos.save(u);
+	
+	}
+	
+	@DeleteMapping("/user/delete/{id}")
+	public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+	    if (!userRepos.existsById(id)) {
+	        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	    }
+	    userRepos.deleteById(id);
+	    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 }

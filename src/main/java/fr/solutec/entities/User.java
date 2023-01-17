@@ -20,5 +20,12 @@ public class User {
 	private String nom;
 	private String prenom;
 	private String mail;
+	private String adresse;
+	private String code_Postale;
+	
+	
+	//private byte[] img;
+	
+	
 	
 }

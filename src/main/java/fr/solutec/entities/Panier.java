@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +19,7 @@ public class Panier {
 	private Long id;
 	private int quantite;
 	
-	@ManyToOne
+	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
 	private Commandes commandes;
 	@ManyToOne
 	private Produits produits;

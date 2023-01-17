@@ -112,6 +112,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		morceauRepo.save(mo5);
 		morceauRepo.save(mo6);
 		morceauRepo.save(mo7);
+
+
 		Produits po1 = new Produits(null,"P1","C1",(float)314,"https://img.freepik.com/photos-gratuite/appareil-numerique-sans-fil-casque-rose_53876-96804.jpg?w=740&t=st=1673805007~exp=1673805607~hmac=b96d774c41761b16f359e6320d10a1c99ff34459bf8e71ec9ce1f43ab75d8fd7");
 		Produits po2 = new Produits(null,"P2","C2",(float)315,"https://img.freepik.com/photos-gratuite/disque-vinyle-assortiment-textures-retro_23-2149076018.jpg?w=740&t=st=1673808138~exp=1673808738~hmac=4b214ae814edfe246d653c2d1987682085b9cc1645988775fa513204ece50b9e");
 		Produits po3 = new Produits(null,"P3","C3",(float)314,"https://img.freepik.com/photos-gratuite/libre-partie-kit-batterie-arriere-plan-flou_169016-23470.jpg?w=740&t=st=1673808269~exp=1673808869~hmac=8cf4f16b1ba0af83408457bc2ecbccb2690f31e65b2138481018343a846bbd47");

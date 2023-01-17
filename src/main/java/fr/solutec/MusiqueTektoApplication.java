@@ -112,10 +112,10 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		morceauRepo.save(mo5);
 		morceauRepo.save(mo6);
 		morceauRepo.save(mo7);
-		Produits po1 = new Produits(null,"P1","C1",(float)10);
-		Produits po2 = new Produits(null,"P2","C2",(float)20);
-		Produits po3 = new Produits(null,"P3","C3",(float)30);
-		Produits po4 = new Produits(null,"P4","C4",(float)40);
+		Produits po1 = new Produits(null,"P1","Pain au chocolat",(float)10);
+		Produits po2 = new Produits(null,"P2","Chocalatine",(float)20);
+		Produits po3 = new Produits(null,"P3","Croissant",(float)30);
+		Produits po4 = new Produits(null,"P4","Pain aux raisins",(float)40);
 		produitsRepo.save(po1);
 		produitsRepo.save(po2);
 		produitsRepo.save(po3);

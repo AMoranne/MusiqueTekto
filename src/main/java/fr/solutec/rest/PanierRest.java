@@ -59,6 +59,8 @@ public class PanierRest {
 	    panierRepos.deleteById(id);
 	    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
+	
+	
 	    
 	    
 

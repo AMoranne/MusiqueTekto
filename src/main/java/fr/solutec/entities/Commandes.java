@@ -18,7 +18,7 @@ public class Commandes {
 	@Id @GeneratedValue	
 	private Long id;
 	
-	private String adresse;
+	private String adresse_livraison;
 	
 	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
 	private User user;

@@ -18,4 +18,5 @@ public class Morceau {
 	private String album;
 	private String genre;
 	private String auteur;
+	private String url;
 }

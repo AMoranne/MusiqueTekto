@@ -14,11 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.solutec.entities.Panier;
-<<<<<<< HEAD
-=======
 
-import fr.solutec.entities.Produits;
->>>>>>> branch 'master' of https://github.com/AMoranne/MusiqueTekto
 import fr.solutec.repository.PanierRepository;
 
 

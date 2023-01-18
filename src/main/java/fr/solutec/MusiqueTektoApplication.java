@@ -62,8 +62,13 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5", "10 rue machin", "45000");
-		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10", "25 avenue de truc", "87999");
+
+		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5", "10 rue machin", "45000", null);
+		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10", "25 avenue de truc", "87999", null);
+
+
+		
+
 		userRepo.save(u1);
 		userRepo.save(u2);
 		Commandes c1 = new Commandes(null,"Test",u1);
@@ -94,8 +99,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);
 		commentairesRepo.save(co2);
-		Message m1 = new Message(null,"wesh alors1");
-		Message m2 = new Message(null,"wesh alors2");
+		Message m1 = new Message(null,"wesh alors1",u1,u2);
+		Message m2 = new Message(null,"wesh alors2",u1,u2);
 		messageRepo.save(m1);
 		messageRepo.save(m2);
 		Morceau mo1 = new Morceau(null,"Whenever You Need Somebody","Rick Astley","Pop","Never Gonna Give You Up","assets/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3");
@@ -112,14 +117,17 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		morceauRepo.save(mo5);
 		morceauRepo.save(mo6);
 		morceauRepo.save(mo7);
-		Produits po1 = new Produits(null,"P1","C1",(float)314,"https://img.freepik.com/photos-gratuite/appareil-numerique-sans-fil-casque-rose_53876-96804.jpg?w=740&t=st=1673805007~exp=1673805607~hmac=b96d774c41761b16f359e6320d10a1c99ff34459bf8e71ec9ce1f43ab75d8fd7");
-		Produits po2 = new Produits(null,"P2","C2",(float)315,"https://img.freepik.com/photos-gratuite/disque-vinyle-assortiment-textures-retro_23-2149076018.jpg?w=740&t=st=1673808138~exp=1673808738~hmac=4b214ae814edfe246d653c2d1987682085b9cc1645988775fa513204ece50b9e");
-		Produits po3 = new Produits(null,"P3","C3",(float)314,"https://img.freepik.com/photos-gratuite/libre-partie-kit-batterie-arriere-plan-flou_169016-23470.jpg?w=740&t=st=1673808269~exp=1673808869~hmac=8cf4f16b1ba0af83408457bc2ecbccb2690f31e65b2138481018343a846bbd47");
-		Produits po4 = new Produits(null,"P4","C4",(float)315,"https://img.freepik.com/photos-gratuite/libre-guitare-electrique-noire-fond-sombre_169016-20244.jpg?w=740&t=st=1673808368~exp=1673808968~hmac=693fc5c82adb8f09b36ea6a6927ec53775fd63a639ac71b20383a643ac4b8516");
-		Produits po5 = new Produits(null,"P1","C1",(float)314,"https://img.freepik.com/photos-gratuite/appareil-numerique-sans-fil-casque-rose_53876-96804.jpg?w=740&t=st=1673805007~exp=1673805607~hmac=b96d774c41761b16f359e6320d10a1c99ff34459bf8e71ec9ce1f43ab75d8fd7");
-		Produits po6 = new Produits(null,"P2","C2",(float)315,"https://img.freepik.com/photos-gratuite/disque-vinyle-assortiment-textures-retro_23-2149076018.jpg?w=740&t=st=1673808138~exp=1673808738~hmac=4b214ae814edfe246d653c2d1987682085b9cc1645988775fa513204ece50b9e");
-		Produits po7 = new Produits(null,"P3","C3",(float)314,"https://img.freepik.com/photos-gratuite/libre-partie-kit-batterie-arriere-plan-flou_169016-23470.jpg?w=740&t=st=1673808269~exp=1673808869~hmac=8cf4f16b1ba0af83408457bc2ecbccb2690f31e65b2138481018343a846bbd47");
-		Produits po8 = new Produits(null,"P4","C4",(float)315,"https://img.freepik.com/photos-gratuite/libre-guitare-electrique-noire-fond-sombre_169016-20244.jpg?w=740&t=st=1673808368~exp=1673808968~hmac=693fc5c82adb8f09b36ea6a6927ec53775fd63a639ac71b20383a643ac4b8516");
+
+
+		Produits po1 = new Produits(null,"Disques","Whenever You Need Somebody",(float)15,"https://m.media-amazon.com/images/I/61tSfUiQdKL._SY355_.jpg");
+		Produits po2 = new Produits(null,"Disques","Hotel California",(float)15,"https://p7.storage.canalblog.com/75/84/636073/127827980_o.jpg");
+		Produits po3 = new Produits(null,"Disques","A Night At The Opera",(float)15,"https://textes-blog-rock-n-roll.fr/wp-content/uploads/2020/11/Queen-A-night-at-the-Opera.jpg");
+		Produits po4 = new Produits(null,"Disques","Ghost Stories",(float)15,"https://www.dafont.com/forum/attach/orig/4/5/454121.jpg?1");
+		Produits po5 = new Produits(null,"Disques","Use Your Illusion II",(float)15,"https://m.media-amazon.com/images/I/71cPYP4T32L._SL1423_.jpg");
+		Produits po6 = new Produits(null,"Équipement audio","Casque",(float)150,"https://img.freepik.com/photos-gratuite/appareil-numerique-sans-fil-casque-rose_53876-96804.jpg?w=740&t=st=1673805007~exp=1673805607~hmac=b96d774c41761b16f359e6320d10a1c99ff34459bf8e71ec9ce1f43ab75d8fd7");
+		Produits po7 = new Produits(null,"Produits dérivés","Peluche",(float)19.99,"https://img.freepik.com/photos-gratuite/disque-vinyle-assortiment-textures-retro_23-2149076018.jpg?w=740&t=st=1673808138~exp=1673808738~hmac=4b214ae814edfe246d653c2d1987682085b9cc1645988775fa513204ece50b9e");
+		Produits po8 = new Produits(null,"Produits dérivés","Mug",(float)12.99,"https://img.freepik.com/photos-gratuite/libre-partie-kit-batterie-arriere-plan-flou_169016-23470.jpg?w=740&t=st=1673808269~exp=1673808869~hmac=8cf4f16b1ba0af83408457bc2ecbccb2690f31e65b2138481018343a846bbd47");
+		Produits po9 = new Produits(null,"Produits dérivés","T-shirt",(float)39.99,"https://img.freepik.com/photos-gratuite/libre-guitare-electrique-noire-fond-sombre_169016-20244.jpg?w=740&t=st=1673808368~exp=1673808968~hmac=693fc5c82adb8f09b36ea6a6927ec53775fd63a639ac71b20383a643ac4b8516");
 
 		produitsRepo.save(po1);
 		produitsRepo.save(po2);
@@ -130,9 +138,10 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		produitsRepo.save(po6);
 		produitsRepo.save(po7);
 		produitsRepo.save(po8);
+		produitsRepo.save(po9);
 		
-		Panier p1 = new Panier(null,5,c1,po1);
-		Panier p2 = new Panier(null,3,c2,po2);
+		Panier p1 = new Panier(null,5,po1);
+		Panier p2 = new Panier(null,3,po2);
 		panierRepo.save(p1);
 		panierRepo.save(p2);
 		Playlist pl1 = new Playlist(null,u1,mo1);

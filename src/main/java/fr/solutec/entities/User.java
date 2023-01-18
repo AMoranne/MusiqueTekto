@@ -3,6 +3,7 @@ package fr.solutec.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,8 +24,8 @@ public class User {
 	private String adresse;
 	private String code_Postale;
 	
-	
-	//private byte[] img;
+	@Lob
+	private byte[] img;
 	
 	
 	

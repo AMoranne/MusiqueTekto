@@ -3,10 +3,6 @@ package fr.solutec.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,12 +10,19 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor @AllArgsConstructor @Data 	
 @Entity
-public class Commandes {
-	@Id @GeneratedValue	
+public class Image {
+	
+	@Id @GeneratedValue
 	private Long id;
 	
-	private String adresse_livraison;
+	private String name;
+	private String type;
 	
-	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
-	private User user;
+	private byte[] picByte;
+	
+	public Image(String name, String type, byte[] picByte) {
+		this.name = name;
+		this.type = type;
+		this.picByte = picByte;
+	}
 }

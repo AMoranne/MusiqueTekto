@@ -3,18 +3,29 @@ package fr.solutec.rest;
 import java.util.List;
 import java.util.Optional;
 
-import org.hibernate.sql.Update;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
+
 import org.springframework.web.bind.annotation.PathVariable;
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/AMoranne/MusiqueTekto
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.solutec.entities.Panier;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/AMoranne/MusiqueTekto
 import fr.solutec.repository.PanierRepository;
 
 
@@ -45,6 +56,20 @@ public class PanierRest {
 		p.setId(id);
 		return panierRepos.save(p);
 	}
+	
+	@DeleteMapping("/panier/delete/{id}")
+	public ResponseEntity<Void> deletePanier(@PathVariable Long id) {
+	    if (!panierRepos.existsById(id)) {
+	        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	        }
+	    panierRepos.deleteById(id);
+	    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+	
+	
+	    
+	    
+
 	
 
 	

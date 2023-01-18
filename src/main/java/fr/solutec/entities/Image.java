@@ -1,12 +1,8 @@
 package fr.solutec.entities;
 
-import java.sql.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,13 +10,19 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor @AllArgsConstructor @Data 	
 @Entity
-public class Message {
-	@Id @GeneratedValue	
-	private Long id;
-	private String contenu;
+public class Image {
 	
-	@ManyToOne
-	private User user;
-	@ManyToOne
-	private User destinataire;
+	@Id @GeneratedValue
+	private Long id;
+	
+	private String name;
+	private String type;
+	
+	private byte[] picByte;
+	
+	public Image(String name, String type, byte[] picByte) {
+		this.name = name;
+		this.type = type;
+		this.picByte = picByte;
+	}
 }

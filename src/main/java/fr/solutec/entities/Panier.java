@@ -19,8 +19,7 @@ public class Panier {
 	private Long id;
 	private int quantite;
 	
-	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
-	private Commandes commandes;
+
 	@ManyToOne
 	private Produits produits;
 	

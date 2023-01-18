@@ -62,10 +62,15 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+<<<<<<< HEAD
+		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5", "10 rue machin", "45000", null);
+		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10", "25 avenue de truc", "87999", null);
+=======
 
 		
 		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5", "10 rue machin", "45000");
 		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10", "25 avenue de truc", "87999");
+>>>>>>> branch 'master' of https://github.com/AMoranne/MusiqueTekto
 		userRepo.save(u1);
 		userRepo.save(u2);
 		Commandes c1 = new Commandes(null,"Test",u1);

@@ -125,20 +125,21 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Produits po4 = new Produits(null,"Disques","Ghost Stories",(float)15,"https://www.dafont.com/forum/attach/orig/4/5/454121.jpg?1");
 		Produits po5 = new Produits(null,"Disques","Use Your Illusion II",(float)15,"https://m.media-amazon.com/images/I/71cPYP4T32L._SL1423_.jpg");
 		Produits po6 = new Produits(null,"Équipement audio","Casque",(float)150,"https://img.freepik.com/photos-gratuite/appareil-numerique-sans-fil-casque-rose_53876-96804.jpg?w=740&t=st=1673805007~exp=1673805607~hmac=b96d774c41761b16f359e6320d10a1c99ff34459bf8e71ec9ce1f43ab75d8fd7");
-		Produits po7 = new Produits(null,"Produits dérivés","Peluche",(float)19.99,"https://img.freepik.com/photos-gratuite/disque-vinyle-assortiment-textures-retro_23-2149076018.jpg?w=740&t=st=1673808138~exp=1673808738~hmac=4b214ae814edfe246d653c2d1987682085b9cc1645988775fa513204ece50b9e");
-		Produits po8 = new Produits(null,"Produits dérivés","Mug",(float)12.99,"https://img.freepik.com/photos-gratuite/libre-partie-kit-batterie-arriere-plan-flou_169016-23470.jpg?w=740&t=st=1673808269~exp=1673808869~hmac=8cf4f16b1ba0af83408457bc2ecbccb2690f31e65b2138481018343a846bbd47");
-		Produits po9 = new Produits(null,"Produits dérivés","T-shirt",(float)39.99,"https://img.freepik.com/photos-gratuite/libre-guitare-electrique-noire-fond-sombre_169016-20244.jpg?w=740&t=st=1673808368~exp=1673808968~hmac=693fc5c82adb8f09b36ea6a6927ec53775fd63a639ac71b20383a643ac4b8516");
+		Produits po7 = new Produits(null,"Produits dérivés","Stickers",(float)5,"https://cdn.laredoute.com/products/6/5/a/65a5852d7e623d8730f5023b742a2e21.jpg?imgopt=twic&twic=v1");
+		Produits po8 = new Produits(null,"Produits dérivés","Mug",(float)12,"https://i.etsystatic.com/26608127/r/il/199a4a/2816066471/il_794xN.2816066471_hoof.jpg");
+		Produits po9 = new Produits(null,"Produits dérivés","T-shirt",(float)40,"https://www.maskperso.shop/wp-content/uploads/2021/07/IMG_8105.jpg");
+		Produits po10 = new Produits(null,"Équipement audio","Écouteur Chorus",(float)90,"https://m.media-amazon.com/images/I/51Awouv9lTL._AC_SL1500_.jpg");
 
 		produitsRepo.save(po1);
 		produitsRepo.save(po2);
 		produitsRepo.save(po3);
 		produitsRepo.save(po4);
-
 		produitsRepo.save(po5);
 		produitsRepo.save(po6);
 		produitsRepo.save(po7);
 		produitsRepo.save(po8);
 		produitsRepo.save(po9);
+		produitsRepo.save(po10);
 		
 		Panier p1 = new Panier(null,5,po1, u1);
 		Panier p2 = new Panier(null,3,po2, u2);

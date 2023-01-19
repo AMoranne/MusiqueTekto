@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.solutec.entities.Billeterie;
-import fr.solutec.entities.Panier;
 import fr.solutec.repository.BilleterieRepository;
 
 

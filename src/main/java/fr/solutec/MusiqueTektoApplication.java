@@ -63,18 +63,15 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 
-		User u1 = new User(null, "U1", "U2", "U3", "U4", "U5", "10 rue machin", "45000", null);
-		User u2 = new User(null, "U6", "U7", "U8", "U9", "U10", "25 avenue de truc", "87999", null);
+		User u1 = new User(null, "login1", "password1", "Tec", "Solu", "prenom1.nom1@gmail.com", "86 Boulevard Haussmann", "75008", null);
+		User u2 = new User(null, "login2", "password2", "Ic", "Es", "U10", "36 Avenue Pierre Brossolette", "92240", null);
 
 
 		
 
 		userRepo.save(u1);
 		userRepo.save(u2);
-		Commandes c1 = new Commandes(null,"Adresse_livraison1","Nom1", "Prenom1",u1);
-		Commandes c2 = new Commandes(null,"Adresse_livraison2","Nom2", "Prenom2",u2);
-		commandesRepo.save(c1);
-		commandesRepo.save(c2);
+
 		Artiste a1 = new Artiste(null,"A1","A2",3,true,"A3","A4");
 		Artiste a2 = new Artiste(null,"A5","A6",3,true,"A7","A8");
 		artisteRepo.save(a1);
@@ -108,15 +105,12 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Morceau mo3 = new Morceau(null,"A Night At The Opera","Queen","Rock","Bohemian Rhapsody","assets/audio/Queen – Bohemian Rhapsody (Official Video Remastered).mp3");
 		Morceau mo4 = new Morceau(null,"Ghost Stories","Coldplay","Pop","A Sky Full Of Stars","assets/audio/Coldplay - A Sky Full Of Stars (Official Video).mp3");
 		Morceau mo5 = new Morceau(null,"Use Your Illusion II","Guns N' Roses","Rock","Knockin' On Heaven's Door","assets/audio/Knockin On Heavens Door.mp3");
-		Morceau mo6 = new Morceau(null,"M21","M22","M23","M24","assets/audio/Rick Roll.mp3");
-		Morceau mo7 = new Morceau(null,"M25","M26","M27","M28","assets/audio/Rick Roll.mp3");
+
 		morceauRepo.save(mo1);
 		morceauRepo.save(mo2);
 		morceauRepo.save(mo3);
 		morceauRepo.save(mo4);
 		morceauRepo.save(mo5);
-		morceauRepo.save(mo6);
-		morceauRepo.save(mo7);
 
 
 		Produits po1 = new Produits(null,"Disques","Whenever You Need Somebody",(float)15,"https://m.media-amazon.com/images/I/61tSfUiQdKL._SY355_.jpg");
@@ -141,24 +135,16 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		produitsRepo.save(po9);
 		produitsRepo.save(po10);
 		
-		Panier p1 = new Panier(null,5,po1, u1);
-		Panier p2 = new Panier(null,3,po2, u2);
-		panierRepo.save(p1);
-		panierRepo.save(p2);
 		Playlist pl1 = new Playlist(null,u1,mo1);
 		Playlist pl2 = new Playlist(null,u1,mo2);
 		Playlist pl3 = new Playlist(null,u1,mo3);
 		Playlist pl4 = new Playlist(null,u1,mo4);
 		Playlist pl5 = new Playlist(null,u1,mo5);
-		Playlist pl6 = new Playlist(null,u2,mo6);
-		Playlist pl7 = new Playlist(null,u2,mo7);
 		playlistRepo.save(pl1);
 		playlistRepo.save(pl2);
 		playlistRepo.save(pl3);
 		playlistRepo.save(pl4);
 		playlistRepo.save(pl5);
-		playlistRepo.save(pl6);
-		playlistRepo.save(pl7);
-		
+
 	}
 }

@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import fr.solutec.entities.Artiste;
+import fr.solutec.entities.Billeterie;
 import fr.solutec.entities.Commandes;
 import fr.solutec.entities.Commentaires;
 import fr.solutec.entities.Evenement;
@@ -18,6 +19,7 @@ import fr.solutec.entities.Playlist;
 import fr.solutec.entities.Produits;
 import fr.solutec.entities.User;
 import fr.solutec.repository.ArtisteRepository;
+import fr.solutec.repository.BilleterieRepository;
 import fr.solutec.repository.CommandesRepository;
 import fr.solutec.repository.CommentairesRepository;
 import fr.solutec.repository.EvenementRepository;
@@ -53,6 +55,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	private PlaylistRepository playlistRepo;
 	@Autowired
 	private ProduitsRepository produitsRepo;
+	@Autowired
+	private BilleterieRepository billeterieRepo;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(MusiqueTektoApplication.class, args);
@@ -95,6 +99,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		evenementRepo.save(e4);
 		evenementRepo.save(e5);
 		evenementRepo.save(e6);
+		Billeterie b1 = new Billeterie (null,1,e4,u2);
+		billeterieRepo.save(b1);
 		Commentaires co1 = new Commentaires(null,"C1",e1,u1);
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);

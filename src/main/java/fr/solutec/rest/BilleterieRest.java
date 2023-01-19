@@ -33,7 +33,7 @@ public class BilleterieRest {
 		return billeterieRepos.findById(id);
 	}
 	
-	@GetMapping("billeterie/evenement/{evenements_id}")
+	@GetMapping("billeterie/evenement/{evenement_id}")
 	public List<Billeterie> GetByEvenement_idAndUser_id(@PathVariable Long evenement_id, @PathVariable Long user_id) {   
 		return billeterieRepos.findByEvenement_idAndUser_id(evenement_id, user_id);
 	}

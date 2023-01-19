@@ -71,8 +71,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 
 		userRepo.save(u1);
 		userRepo.save(u2);
-		Commandes c1 = new Commandes(null,"Test",u1);
-		Commandes c2 = new Commandes(null,"Test",u2);
+		Commandes c1 = new Commandes(null,"Adresse_livraison1","Nom1", "Prenom1",u1);
+		Commandes c2 = new Commandes(null,"Adresse_livraison2","Nom2", "Prenom2",u2);
 		commandesRepo.save(c1);
 		commandesRepo.save(c2);
 		Artiste a1 = new Artiste(null,"A1","A2",3,true,"A3","A4");

@@ -1,5 +1,6 @@
 package fr.solutec.rest;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -13,11 +14,11 @@ import fr.solutec.repository.CommandesRepository;
 
 
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 
-@RestController 
+
+@RestController @CrossOrigin("*")
 public class CommandesRest {
 	
 	@Autowired

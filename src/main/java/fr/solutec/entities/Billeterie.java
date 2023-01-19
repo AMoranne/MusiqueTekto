@@ -23,7 +23,7 @@ public class Billeterie {
 	@ManyToOne
 	private Evenement evenement;
 	
-	@ManyToOne
+	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
 	private User user;
 	
 	

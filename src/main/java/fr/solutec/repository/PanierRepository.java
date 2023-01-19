@@ -10,7 +10,8 @@ import fr.solutec.entities.Panier;
 @Repository
 public interface PanierRepository extends JpaRepository <Panier, Long> {
 	
-	public List<Panier> findByProduits_id(Long produits_id);
+	public List<Panier> findByProduits_idAndUser_id(Long produits_id, Long user_id);
+	public List<Panier> findByUser_id(Long user_id);
 	
 
 }

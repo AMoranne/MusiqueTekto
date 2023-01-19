@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.solutec.entities.Billeterie;
-
+import fr.solutec.entities.Panier;
 import fr.solutec.repository.BilleterieRepository;
 
 
@@ -33,9 +33,14 @@ public class BilleterieRest {
 		return billeterieRepos.findById(id);
 	}
 	
+	@GetMapping("billeterie/user/{user_id}")
+	public List<Billeterie> getByUser_id(@PathVariable Long user_id) {
+		return billeterieRepos.findByUser_id(user_id);
+	}
+	
 	@GetMapping("billeterie/evenement/{evenements_id}")
-	public List<Billeterie> GetByEvenements_id(@PathVariable Long evenements_id) {   
-		return billeterieRepos.findByEvenements_id(evenements_id);
+	public List<Billeterie> GetByEvenement_idAndUser_id(@PathVariable Long evenement_id, @PathVariable Long user_id) {   
+		return billeterieRepos.findByEvenement_idAndUser_id(evenement_id, user_id);
 	}
 	
 	@GetMapping("billeterie")                                 

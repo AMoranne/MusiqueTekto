@@ -23,4 +23,7 @@ public class Panier {
 	@ManyToOne
 	private Produits produits;
 	
+	@ManyToOne
+	private User user;
+	
 }

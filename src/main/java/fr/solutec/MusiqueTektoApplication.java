@@ -140,8 +140,8 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		produitsRepo.save(po8);
 		produitsRepo.save(po9);
 		
-		Panier p1 = new Panier(null,5,po1);
-		Panier p2 = new Panier(null,3,po2);
+		Panier p1 = new Panier(null,5,po1, u1);
+		Panier p2 = new Panier(null,3,po2, u2);
 		panierRepo.save(p1);
 		panierRepo.save(p2);
 		Playlist pl1 = new Playlist(null,u1,mo1);

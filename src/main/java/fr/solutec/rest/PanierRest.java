@@ -36,6 +36,11 @@ public class PanierRest {
 		return panierRepos.findById(id);
 	}
 	
+	@GetMapping("panier/user/{user_id}")
+	public List<Panier> getByUser_id(@PathVariable Long user_id) {
+		return panierRepos.findByUser_id(user_id);
+	}
+	
 	@GetMapping("panier/produit/{produits_id}/{user_id}")
 	public List<Panier> GetByProduits_idAndUser_id(@PathVariable Long produits_id, @PathVariable Long user_id) {   
 		return panierRepos.findByProduits_idAndUser_id(produits_id, user_id);

@@ -23,7 +23,7 @@ public class Panier {
 	@ManyToOne
 	private Produits produits;
 	
-	@ManyToOne
+	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
 	private User user;
 	
 }

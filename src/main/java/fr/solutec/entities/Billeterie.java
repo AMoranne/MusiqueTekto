@@ -20,10 +20,12 @@ public class Billeterie {
 	private Long id;
 	private int quantite;
 	
-	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
-	private Commandes commandes;
 	@ManyToOne
-	private Evenement evenements;
+	private Evenement evenement;
+	
+	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
+	private User user;
+	
 	
 }
 

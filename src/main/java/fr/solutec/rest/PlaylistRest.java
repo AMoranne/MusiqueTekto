@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.solutec.entities.Morceau;
 import fr.solutec.entities.Playlist;
 import fr.solutec.entities.User;
-import fr.solutec.repository.MorceauRepository;
+
 import fr.solutec.repository.PlaylistRepository;
 
 @RestController @CrossOrigin("*")

@@ -78,7 +78,7 @@ public class UserRest {
 	
 	}
 	
-	@DeleteMapping("/user/delete/{id}") @OnDelete(action = OnDeleteAction.CASCADE)
+	@DeleteMapping("user/delete/{id}") @OnDelete(action = OnDeleteAction.CASCADE)
 	public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
 	    if (!userRepos.existsById(id)) {
 	        return new ResponseEntity<>(HttpStatus.NOT_FOUND);

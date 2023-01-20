@@ -12,13 +12,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+
 @NoArgsConstructor @AllArgsConstructor @Data 	
 @Entity
 public class Commandes {
 	@Id @GeneratedValue	
 	private Long id;
 	
-	private String adresse;
+	private String adresse_livraison;
+	private String nom;
+	private String prenom;
 	
 	@ManyToOne @OnDelete(action = OnDeleteAction.CASCADE)
 	private User user;

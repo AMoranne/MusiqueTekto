@@ -14,9 +14,13 @@ import lombok.NoArgsConstructor;
 public class Morceau {
 	@Id @GeneratedValue	
 	private Long id;
-	private String nom;
+	private int like1;
 	private String album;
-	private String genre;
+
 	private String auteur;
+	private String genre;
+
+	private String nom;
+	
 	private String url;
 }

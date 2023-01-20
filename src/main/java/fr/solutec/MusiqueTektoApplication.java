@@ -155,16 +155,14 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		
 		messageRepo.save(m1);
 		messageRepo.save(m2);
-
 		messageRepo.save(m3);
 		messageRepo.save(m4);
 
-		Morceau mo1 = new Morceau(null,"Whenever You Need Somebody","Rick Astley","Pop","Never Gonna Give You Up","assets/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3");
-		Morceau mo2 = new Morceau(null,"Hotel California","Eagles","Rock","Hotel California","assets/audio/Hotel California (2013 Remaster).mp3");
-		Morceau mo3 = new Morceau(null,"A Night At The Opera","Queen","Rock","Bohemian Rhapsody","assets/audio/Queen – Bohemian Rhapsody (Official Video Remastered).mp3");
-		Morceau mo4 = new Morceau(null,"Ghost Stories","Coldplay","Pop","A Sky Full Of Stars","assets/audio/Coldplay - A Sky Full Of Stars (Official Video).mp3");
-		Morceau mo5 = new Morceau(null,"Use Your Illusion II","Guns N' Roses","Rock","Knockin' On Heaven's Door","assets/audio/Knockin On Heavens Door.mp3");
-
+		Morceau mo1 = new Morceau(null,1,"Whenever You Need Somebody","Rick Astley","Pop","Never Gonna Give You Up","assets/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3");
+		Morceau mo2 = new Morceau(null,2,"Hotel California","Eagles","Rock","Hotel California","assets/audio/Hotel California (2013 Remaster).mp3");
+		Morceau mo3 = new Morceau(null,3,"A Night At The Opera","Queen","Rock","Bohemian Rhapsody","assets/audio/Queen – Bohemian Rhapsody (Official Video Remastered).mp3");
+		Morceau mo4 = new Morceau(null,4,"Ghost Stories","Coldplay","Pop","A Sky Full Of Stars","assets/audio/Coldplay - A Sky Full Of Stars (Official Video).mp3");
+		Morceau mo5 = new Morceau(null,5,"Use Your Illusion II","Guns N' Roses","Rock","Knockin' On Heaven's Door","assets/audio/Knockin On Heavens Door.mp3");
 
 		morceauRepo.save(mo1);
 		morceauRepo.save(mo2);

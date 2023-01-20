@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import fr.solutec.entities.Artiste;
 import fr.solutec.entities.Billeterie;
@@ -30,6 +29,8 @@ import fr.solutec.repository.PanierRepository;
 import fr.solutec.repository.PlaylistRepository;
 import fr.solutec.repository.ProduitsRepository;
 import fr.solutec.repository.UserRepository;
+
+
 
 @SpringBootApplication
 public class MusiqueTektoApplication implements CommandLineRunner {
@@ -58,10 +59,56 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 	@Autowired
 	private BilleterieRepository billeterieRepo;
 	
+	/*
+	private Map<String, Integer> progress = new HashMap<>();
+	
+	@Autowired
+	private SimpMessageSendingOperations messagingTemplate; */
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MusiqueTektoApplication.class, args);
 		System.out.println("lancement terminé");
 	}
+	
+	
+	/*
+	@Bean
+	public CommandLineRunner websocketDemo() {
+		return (args) -> {
+			while (true) {
+				try {
+					Thread.sleep(3*1000); // Each 3 sec.
+					progress.put("num1", randomWithRange(0, 100));
+					progress.put("num2", randomWithRange(0, 100));
+					messagingTemplate.convertAndSend("/userc/progress", this.progress);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		};
+	}*/
+	
+	
+	/**
+	 * Get a random integer value in a min / max range.
+	 * @param min min range value
+	 * @param max max range value
+	 * @return A random integer value
+	 */
+	
+	/*
+	private int randomWithRange(int min, int max)
+	{
+		int range = Math.abs(max - min) + 1;
+		return (int)(Math.random() * range) + (min <= max ? min : max);
+	} */
+
+	
+	
+	
+	
+	
+	
 	
 	@Override
 	public void run(String... args) throws Exception {
@@ -102,9 +149,15 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		commentairesRepo.save(co1);
 		commentairesRepo.save(co2);
 		Message m1 = new Message(null,"wesh alors1",u1,u2);
-		Message m2 = new Message(null,"wesh alors2",u1,u2);
+		Message m2 = new Message(null,"wesh alors2",u2,u1);
+		Message m3 = new Message(null,"wesh alors1",u1,u2);
+		Message m4 = new Message(null,"wesh alors2",u2,u1);
+		
 		messageRepo.save(m1);
 		messageRepo.save(m2);
+		messageRepo.save(m3);
+		messageRepo.save(m4);
+
 		Morceau mo1 = new Morceau(null,1,"Whenever You Need Somebody","Rick Astley","Pop","Never Gonna Give You Up","assets/audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3");
 		Morceau mo2 = new Morceau(null,2,"Hotel California","Eagles","Rock","Hotel California","assets/audio/Hotel California (2013 Remaster).mp3");
 		Morceau mo3 = new Morceau(null,3,"A Night At The Opera","Queen","Rock","Bohemian Rhapsody","assets/audio/Queen – Bohemian Rhapsody (Official Video Remastered).mp3");

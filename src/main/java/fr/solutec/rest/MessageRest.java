@@ -21,4 +21,9 @@ public class MessageRest {
 	public List<Message> getById(@PathVariable Long user_id) {    
 		return messageRepo.findByUser_id(user_id);
 	}
+	
+	@GetMapping("messages/user/{user_id}/{destinataire_id}")
+	public List<Message> GetByUser_idAndDestinataire_id(@PathVariable Long user_id, @PathVariable Long destinataire_id) {   
+		return messageRepo.findByUser_idAndDestinataire_id(user_id, destinataire_id);
+	}
 }

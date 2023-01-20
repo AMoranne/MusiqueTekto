@@ -29,6 +29,7 @@ public class Evenement {
 	private String image_mini;
 	private String image_carousel;
 	private String horaire;
+	private int places;
 	
 	@ManyToOne
 	private Lieu lieu;

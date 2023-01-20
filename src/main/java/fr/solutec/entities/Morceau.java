@@ -15,9 +15,12 @@ public class Morceau {
 	@Id @GeneratedValue	
 	private Long id;
 	private int like1;
-	private String nom;
 	private String album;
-	private String genre;
+
 	private String auteur;
+	private String genre;
+
+	private String nom;
+	
 	private String url;
 }

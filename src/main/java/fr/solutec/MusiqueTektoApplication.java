@@ -116,12 +116,14 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 
 		User u1 = new User(null, "login1", "password1", "Tec", "Solu", "prenom1.nom1@gmail.com", "86 Boulevard Haussmann", "75008", null);
 		User u2 = new User(null, "login2", "password2", "Ic", "Es", "U10", "36 Avenue Pierre Brossolette", "92240", null);
-
+		User u3 = new User(null, "login3", "password3", "Oper", "Devel", "prenom3.nom3@gmail.com", "80 Boulevard Haussmann", "75008", null);
+		
 
 		
 
 		userRepo.save(u1);
 		userRepo.save(u2);
+		userRepo.save(u3);
 
 		Artiste a1 = new Artiste(null,"A1","A2",3,true,"A3","A4");
 		Artiste a2 = new Artiste(null,"A5","A6",3,true,"A7","A8");
@@ -148,10 +150,10 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);
 		commentairesRepo.save(co2);
-		Message m1 = new Message(null,"Hello!",u2,u1);
+		Message m1 = new Message(null,"Hello!",u1,u2);
 		Message m2 = new Message(null,"Hello!",u1,u2);
-		Message m3 = new Message(null,"Have a nice day",u2,u1);
-		Message m4 = new Message(null,"Have a nice day",u1,u2);
+		Message m3 = new Message(null,"Have a nice day",u1,u3);
+		Message m4 = new Message(null,"Have a nice day",u2,u1);
 		
 		messageRepo.save(m1);
 		messageRepo.save(m2);

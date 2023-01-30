@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.Date;
 
 import fr.solutec.entities.Artiste;
 import fr.solutec.entities.Billeterie;
@@ -150,10 +151,10 @@ public class MusiqueTektoApplication implements CommandLineRunner {
 		Commentaires co2 = new Commentaires(null,"C2",e2,u2);
 		commentairesRepo.save(co1);
 		commentairesRepo.save(co2);
-		Message m1 = new Message(null,"Hello!",u1,u2);
-		Message m2 = new Message(null,"Hello!",u1,u2);
-		Message m3 = new Message(null,"Have a nice day",u1,u3);
-		Message m4 = new Message(null,"Have a nice day",u2,u1);
+		Message m1 = new Message(null,"Hello!",new Date(),u1,u2);
+		Message m2 = new Message(null,"How are you ?",new Date(),u1,u2);
+		Message m3 = new Message(null,"Have a nice day",new Date(),u1,u3);
+		Message m4 = new Message(null,"Have a nice day",new Date(),u2,u1);
 		
 		messageRepo.save(m1);
 		messageRepo.save(m2);
